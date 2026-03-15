@@ -20,10 +20,10 @@ export default function Home() {
             Welcome To
           </span>
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter mb-8 leading-none bg-clip-text text-transparent bg-gradient-to-br from-white via-gray-300 to-gray-600">
-            MANTI<br className="md:hidden" /> GROUP
+            MANTI
           </h1>
           <p className="text-lg md:text-xl text-mg-muted max-w-2xl mb-12 animate-fade-in-up delay-200">
-            Nigeria&apos;s premium entertainment establishment. Discover the boldest voices defining the next generation of global music.
+            A division of the Manti Group & Affiliates Ltd.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 animate-fade-in-up delay-300">
             <Link

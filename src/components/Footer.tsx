@@ -11,11 +11,11 @@ export function Footer() {
           {/* Brand */}
           <div className="flex flex-col gap-4">
             <Link href="/" className="text-2xl font-bold tracking-tighter text-white flex items-center gap-2">
-              <span className="text-mg-primary">MANTI</span>
-              <span>GROUP</span>
+              <span className="text-white">MANTI</span>
+             
             </Link>
             <p className="text-sm max-w-sm">
-              Nigeria&apos;s premium music label. Home to the boldest voices in modern music.
+              A division of the Manti Group & Affiliates Ltd..
             </p>
           </div>
 
@@ -62,7 +62,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-mg-secondary flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-          <p>&copy; {currentYear} Manti Group Entertainment. All rights reserved.</p>
+          <p>&copy; {currentYear} The Manti Group & Affiliates Ltd.. All rights reserved.</p>
           <div className="flex gap-4">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
