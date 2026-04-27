@@ -11,6 +11,7 @@ const ARTISTES = [
     { id: 6, name: "Shallipopi", genre: "Afro-Pluto", role: "Rising Star" },
 ];
 
+
 const UPDATES = [
     { id: 1, title: "Manti Group announces global expansion plan", type: "Press Release", date: "April 15, 2026", readTime: "5 min read" },
     { id: 2, title: "New Album 'Echoes of Lagos' drops worldwide", type: "Music Release", date: "March 28, 2026", readTime: "Listen Now" },
@@ -70,6 +71,7 @@ export default function ArtisteUpdatesPage() {
             </section>
 
             {/* Updates Section */}
+            
             <section className="bg-mg-surface py-24 relative overflow-hidden">
                 {/* Subtle background glow */}
                 <div className="absolute top-0 right-0 w-1/3 h-full bg-mg-accent/5 blur-[150px] pointer-events-none rounded-full" />
