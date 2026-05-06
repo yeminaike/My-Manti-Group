@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
@@ -26,14 +27,26 @@ export function Navbar() {
 
     return (
         <nav
-            className={`fixed top-0 w-full z-50 transition-all duration-300 border-b border-transparent ${isScrolled ? "bg-mg-surface/90 backdrop-blur-md border-mg-secondary py-4" : "bg-transparent py-6"
-                }`}
+            className={`fixed top-0 w-full z-50 transition-all duration-300 border-b border-transparent ${
+                isScrolled
+                    ? "bg-mg-surface/90 backdrop-blur-md border-mg-secondary"
+                    : "bg-transparent"
+            }`}
         >
-            <div className="max-w-7xl mx-auto px-6 lg:px-8 flex justify-between items-center">
+            <div
+                className={`max-w-7xl mx-auto px-6 lg:px-8 flex justify-between items-center transition-all duration-300 ${
+                    isScrolled ? "h-16" : "h-20"
+                }`}
+            >
                 {/* Logo */}
-                <Link href="/" className="text-2xl font-bold tracking-tighter text-mg-text flex items-center gap-2">
-                    <span className="text-mg-primary">MANTI</span>
-                    <span>GROUP</span>
+                <Link href="/" className="flex items-center">
+                    <Image
+                        src="/images/LekeLogo2.png"
+                        alt="Leke Logo"
+                        width={200}
+                        height={200}
+                        className="h-22 w-auto object-contain"
+                    />
                 </Link>
 
                 {/* Desktop Nav */}
@@ -44,13 +57,15 @@ export function Navbar() {
                             <Link
                                 key={link.href}
                                 href={link.href}
-                                className={`text-sm font-medium transition-colors hover:text-mg-primary relative group ${isActive ? "text-mg-primary" : "text-mg-text"
-                                    }`}
+                                className={`text-sm font-medium transition-colors hover:text-mg-primary relative group ${
+                                    isActive ? "text-mg-primary" : "text-mg-text"
+                                }`}
                             >
                                 {link.label}
                                 <span
-                                    className={`absolute -bottom-1 left-0 h-[2px] bg-mg-primary transition-all duration-300 ${isActive ? "w-full" : "w-0 group-hover:w-full"
-                                        }`}
+                                    className={`absolute -bottom-1 left-0 h-[2px] bg-mg-primary transition-all duration-300 ${
+                                        isActive ? "w-full" : "w-0 group-hover:w-full"
+                                    }`}
                                 />
                             </Link>
                         );
@@ -69,8 +84,9 @@ export function Navbar() {
 
             {/* Mobile Nav */}
             <div
-                className={`md:hidden absolute top-full left-0 w-full bg-mg-surface border-b border-mg-secondary transition-all duration-300 overflow-hidden ${mobileMenuOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
-                    }`}
+                className={`md:hidden absolute top-full left-0 w-full bg-mg-surface border-b border-mg-secondary transition-all duration-300 overflow-hidden ${
+                    mobileMenuOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
+                }`}
             >
                 <div className="flex flex-col py-4 px-6 gap-4">
                     {NAV_LINKS.map((link) => {
@@ -80,8 +96,9 @@ export function Navbar() {
                                 key={link.href}
                                 href={link.href}
                                 onClick={() => setMobileMenuOpen(false)}
-                                className={`text-lg font-medium transition-colors hover:text-mg-primary ${isActive ? "text-mg-primary" : "text-mg-text"
-                                    }`}
+                                className={`text-lg font-medium transition-colors hover:text-mg-primary ${
+                                    isActive ? "text-mg-primary" : "text-mg-text"
+                                }`}
                             >
                                 {link.label}
                             </Link>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Twitter, Instagram, Youtube, Mail } from "lucide-react";
+import Image from "next/image";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,8 +12,14 @@ export function Footer() {
           {/* Brand */}
           <div className="flex flex-col gap-4">
             <Link href="/" className="text-2xl font-bold tracking-tighter text-white flex items-center gap-2">
-              <span className="text-white">MANTI</span>
-             
+              <Image
+                src="/images/LekeLogo2.png"
+                alt="Leke Logo"
+                width={200}
+                height={200}
+                className="h-22 w-auto object-contain"
+              />
+
             </Link>
             <p className="text-sm max-w-sm">
               A division of the Manti Group & Affiliates Ltd..
