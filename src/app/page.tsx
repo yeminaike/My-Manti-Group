@@ -7,9 +7,20 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
       <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
+        {/* Video Background */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover z-10"
+        >
+          <source src="/videos/herovideo.mp4" type="video/mp4" />
+        </video>
+
         {/* Background elements */}
         <div className="absolute inset-0 bg-mg-bg z-0" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-mg-bg/50 to-mg-bg z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-mg-bg/30 to-mg-bg/80 z-10 pointer-events-none" />
 
         {/* Abstract decorative shapes */}
         <div className="absolute top-1/4 -left-1/4 w-1/2 h-1/2 bg-mg-primary/10 rounded-full blur-[120px] z-0 animate-pulse" />
