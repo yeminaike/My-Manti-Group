@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Play } from "lucide-react";
 
@@ -6,16 +5,16 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-screen -mt-20 pt-20 flex items-center justify-center overflow-hidden">
         {/* Video Background */}
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-cover z-10"
+          className="absolute inset-0 w-full h-full object-cover object-center z-10"
         >
-          <source src="/videos/herovideo.mp4" type="video/mp4" />
+          <source src="/videos/herosectionvideo.mp4" type="video/mp4" />
         </video>
 
         {/* Background elements */}
