@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Play } from "lucide-react";
 
 export default function Home() {
@@ -12,9 +13,9 @@ export default function Home() {
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-cover object-center z-10"
+          className="absolute inset-0 w-full h-full object-cover object-center  z-20"
         >
-          <source src="/videos/herosectionvideo.mp4" type="video/mp4" />
+          <source src="/videos/land.mp4" type="video/mp4" />
         </video>
 
         {/* Background elements */}
@@ -67,23 +68,36 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3].map((i) => (
-              <Link key={i} href="/artiste-updates" className="group relative overflow-hidden rounded-2xl aspect-[3/4] bg-mg-surface">
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10 opacity-80 group-hover:opacity-90 transition-opacity" />
-
-                {/* Fallback pattern for when images aren't present */}
-                <div className="absolute inset-0 opacity-10 flex items-center justify-center -z-0">
-                  <div className="w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-mg-primary/40 via-mg-surface to-black" />
+            {(
+              [
+                { name: "Shamz", src: "/images/shamz.PNG" },
+                { name: "artiste", src: "/images/artiste.png"},
+                { name: "Shamz", src: "/images/shamz.PNG" },
+              ]
+            ).map((art, idx) => (
+              <a
+                key={art.name + idx}
+                href="https://x.com/the49thstreet/status/1782475864434741643?s=46&t=FSjqdzJXOyuQiKt1AadA2wth"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative overflow-hidden rounded-2xl aspect-[4/3] bg-mg-surface block transform transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl"
+              >
+                {/* Image fills the card */}
+                <div className="absolute inset-0 ">
+                  <Image src={art.src} alt={art.name} fill className="object-cover" />
                 </div>
+
+                {/* Dark overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10 opacity-80 group-hover:opacity-90 transition-opacity" />
 
                 <div className="absolute bottom-0 left-0 p-8 z-20 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                   <p className="text-mg-primary text-sm font-semibold tracking-wider mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
                     AFROBEATS
                   </p>
-                  <h3 className="text-3xl font-bold text-white mb-2">Artiste Name {i}</h3>
+                  <h3 className="text-3xl font-bold text-white mb-2">{art.name}</h3>
                   <div className="w-12 h-1 bg-mg-primary rounded-full mt-4 group-hover:w-full transition-all duration-500 ease-out" />
                 </div>
-              </Link>
+              </a>
             ))}
           </div>
         </div>
