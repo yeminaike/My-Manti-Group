@@ -55,18 +55,18 @@ export default function Home() {
       </section>
 
       {/* Featured Artists Section */}
-    {/* Featured Artists Section */}
-<section className="py-24 bg-mg-bg relative">
-  <div className="max-w-7xl mx-auto px-6 lg:px-8">
-    <div className="flex justify-between items-end mb-16">
-      <div>
-        <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
-          Featured <span className="text-mg-primary">Artistes</span>
-        </h2>
-      </div>
+      {/* Featured Artists Section */}
+      <section className="py-24 bg-mg-bg relative">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="flex justify-between items-end mb-16">
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
+                Featured <span className="text-mg-primary">Artistes</span>
+              </h2>
+            </div>
 
-      {/* View All button removed for now */}
-      {/*
+            {/* View All button removed for now */}
+            {/*
       <Link
         href="/artiste-updates"
         className="hidden md:flex items-center gap-2 text-mg-muted hover:text-mg-primary transition-colors"
@@ -74,49 +74,49 @@ export default function Home() {
         View All <ArrowRight size={16} />
       </Link>
       */}
-    </div>
-
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-      {[
-        {
-          name: "Shamz",
-          src: "/images/Shamz.jpeg",
-        },
-        {
-          name: "Teddie Bankz",
-          src: "/images/Teddy.jpeg",
-        },
-
-        
-      ].map((art, idx) => (
-        <div
-          key={art.name + idx}
-          className="cursor-pointer group relative overflow-hidden rounded-2xl h-[550px] bg-mg-surface transform transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl"
-        >
-          {/* Image */}
-          <div className="absolute inset-0">
-            <Image
-              src={art.src}
-              alt={art.name}
-              fill
-              className="object-cover"
-            />
           </div>
 
-          {/* Dark Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10 opacity-80 group-hover:opacity-90 transition-opacity" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              {
+                name: "Shamz",
+                src: "/images/Shamz.jpeg",
+              },
+              {
+                name: "Teddie Bankz",
+                src: "/images/Teddy.jpeg",
+              },
 
-          {/* Artist Name */}
-          <div className="absolute bottom-0 left-0 p-8 z-20 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-            <h3 className="text-3xl font-bold text-white">
-              {art.name}
-            </h3>
+
+            ].map((art, idx) => (
+              <div
+                key={art.name + idx}
+                className="cursor-pointer group relative overflow-hidden rounded-2xl h-[550px] bg-mg-surface transform transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl"
+              >
+                {/* Image */}
+                <div className="absolute inset-0">
+                  <Image
+                    src={art.src}
+                    alt={art.name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+
+                {/* Dark Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10 opacity-80 group-hover:opacity-90 transition-opacity" />
+
+                {/* Artist Name */}
+                <div className="absolute bottom-0 left-0 p-8 z-20 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                  <h3 className="text-3xl font-bold text-white">
+                    {art.name}
+                  </h3>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* Latest Updates Section */}
       <section className="py-24 bg-mg-surface relative overflow-hidden">
@@ -131,33 +131,81 @@ export default function Home() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Featured Feature */}
+
             <div className="relative group overflow-hidden rounded-2xl aspect-video bg-[#0a0a0a] border border-mg-secondary">
+              {/* Video */}
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover"
+              >
+                <source src="/videos/land.mp4" type="video/mp4" />
+              </video>
+
+              {/* Play button */}
               <div className="absolute inset-0 flex items-center justify-center z-20">
                 <div className="w-16 h-16 rounded-full bg-mg-primary/90 flex items-center justify-center text-black transform group-hover:scale-110 transition-transform cursor-pointer shadow-[0_0_30px_rgba(212,175,55,0.3)]">
                   <Play size={24} className="ml-1" />
                 </div>
               </div>
+
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10" />
               <div className="absolute bottom-0 left-0 p-8 z-20">
-                <span className="px-3 py-1 bg-white text-black text-xs font-bold tracking-wider rounded-full mb-4 inline-block">MUSIC VIDEO</span>
+                <span className="px-3 py-1 bg-white text-black text-xs font-bold tracking-wider rounded-full mb-4 inline-block">
+                  MUSIC VIDEO
+                </span>
                 <h3 className="text-2xl font-bold text-white">New Release: The Global Anthem</h3>
               </div>
             </div>
 
+
             {/* List Updates */}
             <div className="flex flex-col gap-6 justify-center">
-              {[1, 2, 3].map((i) => (
-                <div key={i} className="flex gap-6 items-center group cursor-pointer p-4 rounded-xl hover:bg-mg-secondary/50 transition-colors border border-transparent hover:border-mg-secondary">
-                  <div className="w-24 h-24 rounded-lg bg-mg-bg flex-shrink-0 flex items-center justify-center text-mg-muted relative overflow-hidden">
-                    {/* Placeholder for small thumbnail */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-mg-secondary to-black" />
+              {[
+                {
+                  category: "Spotlight Monday",
+                  title: "Shamz featured in an exclusive interview with The49thStreet",
+                  date: "March 11, 2026",
+                  href: "https://the49thstreet.com/spotlight-monday-shamz",
+                  src: "/images/Shamz.jpeg",
+                },
+                {
+                  category: "New Release",
+                  title: "Teddie Bankz announces upcoming single and visuals",
+                  date: "March 18, 2026",
+                  href: "https://example.com/teddie-release",
+                  src: "/images/Teddy.jpeg"
+                },
+
+              ].map((post, index) => (
+                <a
+                  key={index}
+                  href={post.href}
+                  className="flex gap-6 items-center group cursor-pointer p-4 rounded-xl hover:bg-mg-secondary/50 transition-colors border border-transparent hover:border-mg-secondary"
+                >
+                  {/* Image Thumbnail */}
+                  <div className="w-24 h-24 rounded-lg flex-shrink-0 overflow-hidden relative">
+                    <Image
+                      src={post.src}
+                      alt={post.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    {/* Optional subtle overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-black/30 to-transparent" />
                   </div>
                   <div>
-                    <span className="text-mg-primary text-xs font-semibold tracking-wider mb-2 block">PRESS RELEASE</span>
-                    <h4 className="text-lg font-bold text-white mb-2 group-hover:text-mg-primary transition-colors">Manti Group signs multi-million dollar distribution deal</h4>
-                    <p className="text-sm text-mg-muted">March {10 + i}, 2026</p>
+                    <span className="text-mg-primary text-xs font-semibold tracking-wider mb-2 block">
+                      {post.category}
+                    </span>
+                    <h4 className="text-lg font-bold text-white mb-2 group-hover:text-mg-primary transition-colors">
+                      {post.title}
+                    </h4>
+                    <p className="text-sm text-mg-muted">{post.date}</p>
                   </div>
-                </div>
+                </a>
               ))}
             </div>
           </div>

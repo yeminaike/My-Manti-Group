@@ -22,7 +22,7 @@ export function Footer() {
 
             </Link>
             <p className="text-sm max-w-sm">
-              A division of the Manti Group & Affiliates Ltd..
+              A division of the Manti Group & Affiliates Ltd.
             </p>
           </div>
 
