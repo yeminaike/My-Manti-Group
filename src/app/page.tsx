@@ -34,7 +34,7 @@ export default function Home() {
             MANTI
           </h1>
           <p className="text-lg md:text-xl text-mg-muted max-w-2xl mb-12 animate-fade-in-up delay-200">
-            A division of the Manti Group & Affiliates Ltd.
+            A division of the Manti Group & Affiliates Limited
           </p>
           <div className="flex flex-col sm:flex-row gap-6 animate-fade-in-up delay-300">
             <Link
@@ -55,53 +55,66 @@ export default function Home() {
       </section>
 
       {/* Featured Artists Section */}
-      <section className="py-24 bg-mg-bg relative">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="flex justify-between items-end mb-16">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">Featured <span className="text-mg-primary">Artistes</span></h2>
-              <p className="text-mg-muted">The vanguard of modern sound.</p>
-            </div>
-            <Link href="/artiste-updates" className="hidden md:flex items-center gap-2 text-mg-muted hover:text-mg-primary transition-colors">
-              View All <ArrowRight size={16} />
-            </Link>
+    {/* Featured Artists Section */}
+<section className="py-24 bg-mg-bg relative">
+  <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <div className="flex justify-between items-end mb-16">
+      <div>
+        <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
+          Featured <span className="text-mg-primary">Artistes</span>
+        </h2>
+      </div>
+
+      {/* View All button removed for now */}
+      {/*
+      <Link
+        href="/artiste-updates"
+        className="hidden md:flex items-center gap-2 text-mg-muted hover:text-mg-primary transition-colors"
+      >
+        View All <ArrowRight size={16} />
+      </Link>
+      */}
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {[
+        {
+          name: "Shamz",
+          src: "/images/Shamz.jpeg",
+        },
+        {
+          name: "Teddie Bankz",
+          src: "/images/Teddy.jpeg",
+        },
+      ].map((art, idx) => (
+        <div
+          key={art.name + idx}
+          className="cursor-pointer group relative overflow-hidden rounded-2xl h-[550px] bg-mg-surface transform transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl"
+        >
+          {/* Image */}
+          <div className="absolute inset-0">
+            <Image
+              src={art.src}
+              alt={art.name}
+              fill
+              className="object-cover"
+            />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {(
-              [
-                { name: "Shamz", src: "/images/shamz.PNG" },
-                { name: "artiste", src: "/images/artiste.png"},
-                { name: "Shamz", src: "/images/shamz.PNG" },
-              ]
-            ).map((art, idx) => (
-              <a
-                key={art.name + idx}
-                href="https://x.com/the49thstreet/status/1782475864434741643?s=46&t=FSjqdzJXOyuQiKt1AadA2wth"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative overflow-hidden rounded-2xl aspect-[4/3] bg-mg-surface block transform transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl"
-              >
-                {/* Image fills the card */}
-                <div className="absolute inset-0 ">
-                  <Image src={art.src} alt={art.name} fill className="object-cover" />
-                </div>
+          {/* Dark Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10 opacity-80 group-hover:opacity-90 transition-opacity" />
 
-                {/* Dark overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10 opacity-80 group-hover:opacity-90 transition-opacity" />
-
-                <div className="absolute bottom-0 left-0 p-8 z-20 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                  <p className="text-mg-primary text-sm font-semibold tracking-wider mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
-                    AFROBEATS
-                  </p>
-                  <h3 className="text-3xl font-bold text-white mb-2">{art.name}</h3>
-                  <div className="w-12 h-1 bg-mg-primary rounded-full mt-4 group-hover:w-full transition-all duration-500 ease-out" />
-                </div>
-              </a>
-            ))}
+          {/* Artist Name */}
+          <div className="absolute bottom-0 left-0 p-8 z-20 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+            <h3 className="text-3xl font-bold text-white">
+              {art.name}
+            </h3>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* Latest Updates Section */}
       <section className="py-24 bg-mg-surface relative overflow-hidden">
@@ -111,7 +124,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">Latest <span className="text-mg-primary">Updates</span></h2>
-            <p className="text-mg-muted">Releases, news, and events from Manti Group.</p>
+            <p className="text-mg-muted">Releases  events from Manti.</p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
