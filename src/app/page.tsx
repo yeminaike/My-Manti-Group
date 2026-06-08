@@ -86,6 +86,8 @@ export default function Home() {
           name: "Teddie Bankz",
           src: "/images/Teddy.jpeg",
         },
+
+        
       ].map((art, idx) => (
         <div
           key={art.name + idx}
