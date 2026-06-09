@@ -1,11 +1,8 @@
+import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Calendar, Music, ExternalLink } from "lucide-react";
+import { ARTISTES } from "@/lib/artistes";
 
-const ARTISTES = [
-  { id: 1, name: "Alee Azar", src: "/images/Leke.jpeg", role: "Recording Artiste" },
-  { id: 2, name: "Shamz", src: "/images/Shamz.jpeg", role: "Recording Artiste" },
-  { id: 3, name: "Teddie Bankz", src: "/images/Teddy.jpeg", role: "Recording Artiste" },
-];
 
 const UPDATES = [
   {
@@ -56,9 +53,10 @@ export default function ArtisteUpdatesPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {ARTISTES.map((artiste) => (
-              <div
+              <Link
                 key={artiste.id}
-                className="group w-full relative overflow-hidden h-[550px] rounded-xl aspect-[4/5] bg-mg-surface border border-mg-secondary cursor-pointer"
+                href={`/artiste-updates/${artiste.slug}`}
+                className="group w-full relative overflow-hidden h-[550px] rounded-xl aspect-[4/5] bg-mg-surface border border-mg-secondary block"
               >
                 {/* Artist Image */}
                 <Image
@@ -85,7 +83,7 @@ export default function ArtisteUpdatesPage() {
                     <ArrowRight size={18} />
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
