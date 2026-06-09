@@ -55,68 +55,61 @@ export default function Home() {
       </section>
 
     
-      {/* Featured Artists Section */}
-      <section className="py-24 bg-mg-bg relative">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="flex justify-between items-end mb-16">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
-                Featured <span className="text-mg-primary">Artistes</span>
-              </h2>
-            </div>
+     {/* Featured Artists Section */}
+<section className="py-24 bg-mg-bg relative">
+  <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <div className="flex justify-between items-end mb-16">
+      <div>
+        <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
+          Featured <span className="text-mg-primary">Artistes</span>
+        </h2>
+      </div>
+    </div>
 
-            {/* View All button removed for now */}
-            {/*
-      <Link
-        href="/artiste-updates"
-        className="hidden md:flex items-center gap-2 text-mg-muted hover:text-mg-primary transition-colors"
-      >
-        View All <ArrowRight size={16} />
-      </Link>
-      */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {[
+        {
+          name: "Shamz",
+          src: "/images/Shamz.jpeg",
+        },
+        {
+          name: "Teddie Bankz",
+          src: "/images/Teddy.jpeg",
+        },
+      ].map((art, idx) => (
+        <div
+          key={art.name + idx}
+          className="cursor-pointer group relative overflow-hidden rounded-2xl h-[550px] bg-mg-surface transform transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl"
+        >
+          {/* Image */}
+          <div className="absolute inset-0">
+            <Image
+              src={art.src}
+              alt={art.name}
+              fill
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
+            />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[
-              {
-                name: "Shamz",
-                src: "/images/Shamz.jpeg",
-              },
-              {
-                name: "Teddie Bankz",
-                src: "/images/Teddy.jpeg",
-              },
+          {/* Dark Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10 opacity-80 group-hover:opacity-90 transition-opacity" />
 
+          {/* Yellow/Gold Glow Effect (Same as Roster) */}
+          <div className="absolute inset-0 opacity-20 hidden group-hover:block blur-xl transition-all duration-500 overflow-hidden z-20">
+            <div className="w-full h-full bg-mg-primary rounded-full transform scale-150 translate-y-1/2" />
+          </div>
 
-            ].map((art, idx) => (
-              <div
-                key={art.name + idx}
-                className="cursor-pointer group relative overflow-hidden rounded-2xl h-[550px] bg-mg-surface transform transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl"
-              >
-                {/* Image */}
-                <div className="absolute inset-0">
-                  <Image
-                    src={art.src}
-                    alt={art.name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-
-                {/* Dark Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10 opacity-80 group-hover:opacity-90 transition-opacity" />
-
-                {/* Artist Name */}
-                <div className="absolute bottom-0 left-0 p-8 z-20 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                  <h3 className="text-3xl font-bold text-white">
-                    {art.name}
-                  </h3>
-                </div>
-              </div>
-            ))}
+          {/* Artist Name */}
+          <div className="absolute bottom-0 left-0 p-8 z-30 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+            <h3 className="text-3xl font-bold text-white mb-1 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-mg-primary group-hover:to-white transition-all">
+              {art.name}
+            </h3>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* Latest Updates Section */}
       <section className="py-24 bg-mg-surface relative overflow-hidden">
