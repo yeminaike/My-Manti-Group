@@ -15,7 +15,7 @@ export default function ContactPage() {
                         Let&apos;s <span className="text-mg-primary">Connect</span>
                     </h1>
                     <p className="text-xl text-mg-muted max-w-2xl">
-                        Whether for bookings, press inquiries, or partnerships, the Manti Group team is ready to collaborate.
+                        Whether for bookings, press inquiries, or partnerships, the Manti  team is ready to collaborate.
                     </p>
                 </section>
 

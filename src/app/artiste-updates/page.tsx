@@ -40,7 +40,7 @@ export default function ArtisteUpdatesPage() {
           Artistes & <span className="text-mg-primary">Updates</span>
         </h1>
         <p className="text-xl text-mg-muted max-w-3xl mx-auto">
-          The faces behind the sound. The news behind the brand. Discover the latest from Manti Group&apos;s roster and operations.
+          The faces behind the sound. The news behind the brand. Discover the latest from Manti&apos;s roster and operations.
         </p>
       </section>
 
