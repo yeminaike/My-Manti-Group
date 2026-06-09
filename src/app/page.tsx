@@ -57,6 +57,8 @@ export default function Home() {
       </section>
 
 
+    
+
       {/* Featured Artists Section */}
       <section className="py-24 bg-mg-bg relative">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
