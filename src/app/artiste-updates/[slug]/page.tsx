@@ -84,7 +84,7 @@ export default async function ArtisteBioPage({
                     </h1>
 
                     {/* Headline */}
-                    <p className="text-lg text-mg-muted max-w-xl">{artiste.headline}</p>
+                    {/* <p className="text-lg text-mg-muted max-w-xl">{artiste.headline}</p> */}
 
                     {/* Monthly Listeners */}
                     <div className="flex items-center gap-2 text-mg-muted">
