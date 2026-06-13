@@ -95,36 +95,40 @@ export default async function ArtisteBioPage({
                     {/* Platform Icons */}
                     <div className="flex gap-4 pt-2">
                         <a
-                            href="#"
+                            href={artiste.socials.spotify}
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label={`${artiste.name} on Spotify`}
                             className="text-mg-muted hover:text-[#1DB954] transition-colors"
                         >
                             <SiSpotify size={32} />
                         </a>
 
                         <a
-                            href="#"
+                            href={artiste.socials.instagram}
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label={`${artiste.name} on Instagram`}
                             className="text-mg-muted hover:text-[#E4405F] transition-colors"
                         >
                             <FaInstagram size={32} />
                         </a>
 
                         <a
-                            href="#"
+                            href={artiste.socials.youtube}
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label={`${artiste.name} on YouTube`}
                             className="text-mg-muted hover:text-[#FF0000] transition-colors"
                         >
                             <FaYoutube size={32} />
                         </a>
 
                         <a
-                            href="#"
+                            href={artiste.socials.apple}
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label={`${artiste.name} on Apple Music`}
                             className="text-mg-muted hover:text-white transition-colors"
                         >
                             <FaApple size={32} />
