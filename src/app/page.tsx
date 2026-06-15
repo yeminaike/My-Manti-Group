@@ -57,7 +57,7 @@ export default function Home() {
       </section>
 
 
-    
+
 
       {/* Featured Artists Section */}
       <section className="py-24 bg-mg-bg relative">
@@ -72,7 +72,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-                {
+              {
                 name: "Teddie Bankz",
                 src: "/images/Teddy.jpeg",
               },
@@ -81,7 +81,7 @@ export default function Home() {
                 name: "Shamz",
                 src: "/images/Shamz.jpeg",
               },
-            
+
             ].map((art, idx) => (
               <div
                 key={art?.name + idx}
@@ -166,7 +166,7 @@ export default function Home() {
                 {
                   category: "Spotlight Monday",
                   title: "Shamz featured in an exclusive interview with The49thStreet",
-                  date: "March 11, 2026",
+                  date: "April 22, 2024",
                   href: "https://the49thstreet.com/spotlight-monday-shamz",
                   src: "/images/Shamz.jpeg",
                 },
@@ -182,6 +182,8 @@ export default function Home() {
                 <a
                   key={index}
                   href={post.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex gap-6 items-center group cursor-pointer p-4 rounded-xl hover:bg-mg-secondary/50 transition-colors border border-transparent hover:border-mg-secondary"
                 >
                   {/* Image Thumbnail */}
@@ -192,16 +194,18 @@ export default function Home() {
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
                     />
-                    {/* Optional subtle overlay */}
                     <div className="absolute inset-0 bg-gradient-to-br from-black/30 to-transparent" />
                   </div>
+
                   <div>
                     <span className="text-mg-primary text-xs font-semibold tracking-wider mb-2 block">
                       {post.category}
                     </span>
+
                     <h4 className="text-lg font-bold text-white mb-2 group-hover:text-mg-primary transition-colors">
                       {post.title}
                     </h4>
+
                     <p className="text-sm text-mg-muted">{post.date}</p>
                   </div>
                 </a>
