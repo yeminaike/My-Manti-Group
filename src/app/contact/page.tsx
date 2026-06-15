@@ -1,6 +1,8 @@
 "use client";
 
-import { MapPin, Phone, Mail, Instagram, Twitter, Youtube } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
+import { Instagram } from "lucide-react";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function ContactPage() {
     return (
@@ -30,11 +32,11 @@ export default function ContactPage() {
                                 </div>
                                 <div>
                                     <h3 className="text-lg font-bold text-white mb-1 uppercase tracking-wider">Headquarters</h3>
-                                    <p className="text-mg-muted">Lagos, Nigeria</p>
+                                    <p className="text-mg-muted">London, United Kingdom</p>
                                 </div>
                             </div>
 
-                            <div className="flex gap-4 items-start group">
+                            {/* <div className="flex gap-4 items-start group">
                                 <div className="p-4 rounded-xl bg-mg-surface border border-mg-secondary group-hover:border-mg-primary group-hover:bg-mg-primary/10 transition-colors">
                                     <Mail className="text-mg-primary" size={24} />
                                 </div>
@@ -43,7 +45,7 @@ export default function ContactPage() {
                                     <p className="text-mg-muted">info@mantigroup.com (General Inquiries)</p>
                                     <p className="text-mg-muted">bookings@mantigroup.com (Bookings)</p>
                                 </div>
-                            </div>
+                            </div> */}
 
                             <div className="flex gap-4 items-start group">
                                 <div className="p-4 rounded-xl bg-mg-surface border border-mg-secondary group-hover:border-mg-primary group-hover:bg-mg-primary/10 transition-colors">
@@ -60,15 +62,25 @@ export default function ContactPage() {
                         <div className="pt-8 border-t border-mg-secondary">
                             <h3 className="text-lg font-bold text-white mb-4 uppercase tracking-wider">Follow Operations</h3>
                             <div className="flex gap-4">
-                                <a href="#" className="p-3 bg-mg-surface rounded-full border border-mg-secondary hover:border-mg-primary hover:text-mg-primary transition-colors">
-                                    <Instagram size={20} />
-                                </a>
-                                <a href="#" className="p-3 bg-mg-surface rounded-full border border-mg-secondary hover:border-mg-primary hover:text-mg-primary transition-colors">
-                                    <Twitter size={20} />
-                                </a>
-                                <a href="#" className="p-3 bg-mg-surface rounded-full border border-mg-secondary hover:border-mg-primary hover:text-mg-primary transition-colors">
-                                    <Youtube size={20} />
-                                </a>
+                               <a
+                                             href="https://www.instagram.com/themantigroup_a?igsh=b2V5NndheXllOTFu&utm_source=qr"
+                                             target="_blank"
+                                             rel="noopener noreferrer"
+                                             aria-label="Instagram"
+                                             className="hover:text-[#E4405F] transition-colors"
+                                           >
+                                             <Instagram size={24} />
+                                           </a>
+                             
+                                           <a
+                                             href="https://x.com/mantigroup?s=11&t=FSjqdzJXOyuQiKt1AadA2w"
+                                             target="_blank"
+                                             rel="noopener noreferrer"
+                                             aria-label="X"
+                                             className="hover:text-white transition-colors"
+                                           >
+                                             <FaXTwitter size={24} />
+                                           </a>
                             </div>
                         </div>
                     </section>
