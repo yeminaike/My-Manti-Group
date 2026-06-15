@@ -20,7 +20,7 @@ export const ARTISTES: Artiste[] = [
     slug: "alee-azar",
     name: "Alee Azar",
     src: "/images/Leke.jpeg",
-    role: "Recording Artiste",
+    role: " Executive/Producer",
     // headline: "A rising voice in modern Afro-pop, blending soulful melodies with bold storytelling.",
     about:
       "Adeleke “Leke Play” Ogunnaike aka “Alee Azar” is the founder & owner of The Manti Group & Affiliates Limited. Leke, who has a great ear for sonics, started as a producer in his room in Yaba, making beats with friends. After his MBA from the University of Northampton, UK.  He then worked on developing a company built on appreciating not just artistes but all members of the creative community alike.",
@@ -31,24 +31,10 @@ export const ARTISTES: Artiste[] = [
       apple: "#",
     },
   },
-  {
+
+
+   {
     id: 2,
-    slug: "shamz",
-    name: "Shamz",
-    src: "/images/Shamz.jpeg",
-    role: "Recording Artiste",
-    // headline: "Spotlight energy with hard-hitting rhythms and magnetic performance flair.",
-    about:
-      "Shamz got into music-making fully in his third year of University, combining his love for music with school work. This theme of love and affection can be found across his music catalog, mixed with stories and adventures that encourage one to enjoy every moment of life." ,
-    socials: {
-      spotify: "https://open.spotify.com/artist/5BTiYinfrdyxszp93jIMAs?si=q3J8XQxhQ6OY4PQb01Z7Ig",
-      instagram: "https://www.instagram.com/ot_shammah",
-      youtube: "https://youtube.com/channel/UCei2V9xJ1alvpJU-KcIzfAw?si=arODcjPYrSVi8uI9",
-      apple: "https://music.apple.com/ca/artist/shamz/1673552179",
-    },
-  },
-  {
-    id: 3,
     slug: "teddie-bankz",
     name: "Teddie Bankz",
     src: "/images/Teddy.jpeg",
@@ -63,6 +49,25 @@ export const ARTISTES: Artiste[] = [
       apple: "https://music.apple.com/ca/artist/teddie-bankz/1610712317",
     },
   },
+
+
+  {
+    id: 3,
+    slug: "shamz",
+    name: "Shamz",
+    src: "/images/Shamz.jpeg",
+    role: "Recording Artiste",
+    // headline: "Spotlight energy with hard-hitting rhythms and magnetic performance flair.",
+    about:
+      "Shamz got into music-making fully in his third year of University, combining his love for music with school work. This theme of love and affection can be found across his music catalog, mixed with stories and adventures that encourage one to enjoy every moment of life." ,
+    socials: {
+      spotify: "https://open.spotify.com/artist/5BTiYinfrdyxszp93jIMAs?si=q3J8XQxhQ6OY4PQb01Z7Ig",
+      instagram: "https://www.instagram.com/ot_shammah",
+      youtube: "https://youtube.com/channel/UCei2V9xJ1alvpJU-KcIzfAw?si=arODcjPYrSVi8uI9",
+      apple: "https://music.apple.com/ca/artist/shamz/1673552179",
+    },
+  },
+ 
 ];
 
 export function getArtisteBySlug(slug: string) {
