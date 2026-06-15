@@ -88,8 +88,8 @@ export default async function ArtisteBioPage({
 
                     {/* Monthly Listeners */}
                     <div className="flex items-center gap-2 text-mg-muted">
-                        <span className="text-xl">👥</span>
-                        <span className="text-lg font-medium">1.2M monthly listeners</span>
+                        {/* <span className="text-xl">👥</span> */}
+                        {/* <span className="text-lg font-medium">1.2M monthly listeners</span> */}
                     </div>
 
                     {/* Platform Icons */}
