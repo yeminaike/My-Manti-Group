@@ -72,14 +72,16 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
+                {
+                name: "Teddie Bankz",
+                src: "/images/Teddy.jpeg",
+              },
+
               {
                 name: "Shamz",
                 src: "/images/Shamz.jpeg",
               },
-              {
-                name: "Teddie Bankz",
-                src: "/images/Teddy.jpeg",
-              },
+            
             ].map((art, idx) => (
               <div
                 key={art?.name + idx}
@@ -159,7 +161,7 @@ export default function Home() {
 
 
             {/* List Updates */}
-            <div className="flex flex-col gap-6 justify-center">
+            <div className="flex flex-col gap-6 ">
               {[
                 {
                   category: "Spotlight Monday",
@@ -168,13 +170,13 @@ export default function Home() {
                   href: "https://the49thstreet.com/spotlight-monday-shamz",
                   src: "/images/Shamz.jpeg",
                 },
-                {
-                  category: "New Release",
-                  title: "Teddie Bankz announces upcoming single and visuals",
-                  date: "March 18, 2026",
-                  href: "https://example.com/teddie-release",
-                  src: "/images/Teddy.jpeg"
-                },
+                // {
+                //   category: "New Release",
+                //   title: "Teddie Bankz announces upcoming single and visuals",
+                //   date: "March 18, 2026",
+                //   href: "https://example.com/teddie-release",
+                //   src: "/images/Teddy.jpeg"
+                // },
 
               ].map((post, index) => (
                 <a
@@ -207,11 +209,11 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-16 text-center">
+          {/* <div className="mt-16 text-center">
             <Link href="/artiste-updates" className="inline-flex items-center gap-2 text-mg-primary hover:text-white font-semibold transition-colors border-b border-mg-primary hover:border-white pb-1">
               Read All Updates <ArrowRight size={16} />
             </Link>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>
