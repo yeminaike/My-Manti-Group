@@ -13,22 +13,22 @@ const UPDATES = [
     readTime: "5 min read",
     href: "https://the49thstreet.com/spotlight-monday-shamz",
   },
-  {
-    id: 2,
-    title: "New Album 'Echoes of Lagos' drops worldwide",
-    type: "Music Release",
-    date: "March 28, 2026",
-    readTime: "Listen Now",
-    href: "#", // Add real link when available
-  },
-  {
-    id: 3,
-    title: "Sold out O2 Arena: The Manti Experience",
-    type: "Event Coverage",
-    date: "March 10, 2026",
-    readTime: "3 min read",
-    href: "#", // Add real link when available
-  },
+  // {
+  //   id: 2,
+  //   title: "New Album 'Echoes of Lagos' drops worldwide",
+  //   type: "Music Release",
+  //   date: "March 28, 2026",
+  //   readTime: "Listen Now",
+  //   href: "#", // Add real link when available
+  // },
+  // {
+  //   id: 3,
+  //   title: "Sold out O2 Arena: The Manti Experience",
+  //   type: "Event Coverage",
+  //   date: "March 10, 2026",
+  //   readTime: "3 min read",
+  //   href: "#", // Add real link when available
+  // },
 ];
 
 export default function ArtisteUpdatesPage() {
@@ -90,7 +90,7 @@ export default function ArtisteUpdatesPage() {
       </section>
 
       {/* Updates Section */}
-      <section className="bg-mg-surface py-24 relative overflow-hidden">
+      {/* <section className="bg-mg-surface py-24 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-mg-accent/5 blur-[150px] pointer-events-none rounded-full" />
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <div className="flex items-center gap-4 mb-12 border-b border-mg-secondary/50 pb-4">
@@ -143,7 +143,7 @@ export default function ArtisteUpdatesPage() {
             </button>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
