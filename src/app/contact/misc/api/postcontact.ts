@@ -1,6 +1,7 @@
 import { useMutation } from "@tanstack/react-query";
 
-const API_BASE_URL = "http://localhost:4000";
+// This reads from your .env file or your hosting platform env.
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
 
 export interface ContactData {
   full_name: string;
@@ -24,6 +25,8 @@ export const postContact = async (
     },
     body: JSON.stringify(data),
   });
+
+  console.log("API_BASE_URL:", API_BASE_URL);
 
   const result = await response.json();
 
