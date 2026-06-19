@@ -241,7 +241,7 @@ export default function ContactPage() {
               <button
                 type="submit"
                 disabled={isPending}
-                className="mt-4 px-8 py-4 bg-white text-black font-bold uppercase tracking-wider rounded-xl hover:bg-mg-primary transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="mt-4 cursor-pointer px-8 py-4 bg-white text-black font-bold uppercase tracking-wider rounded-xl hover:bg-mg-primary transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isPending ? "Sending..." : "Send Inquiry"}
               </button>
